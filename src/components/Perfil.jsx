@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { MdOutlineMailLock } from "react-icons/md";
 import supbaselogo from "../assets/supabaselogo.png"
-export function Perfil({ foto, name,email }) {
+
+export function Perfil({ foto, name, email }) {
   return (
     <Container>
       <section className="header">
@@ -10,19 +11,21 @@ export function Perfil({ foto, name,email }) {
         </div>
         <span>{name}</span>
       </section>
+
       <section className="footer">
         <div className="content">
           <MdOutlineMailLock />
           <span>{email}</span>
         </div>
       </section>
+
       <div className="contentLogosupa">
-           <img src={supbaselogo} className="logo supabase" alt="Vite logo" />
+        <img src={supbaselogo} className="logo supabase" alt="Vite logo" />
       </div>
-   
     </Container>
   );
 }
+
 const Container = styled.div`
 position:relative;
 background: #262827;
